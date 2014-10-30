@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84FCD78A1A027C9B00C98C81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD7891A027C9B00C98C81 /* Foundation.framework */; };
+		84FCD78C1A027C9B00C98C81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD78B1A027C9B00C98C81 /* CoreGraphics.framework */; };
+		84FCD78E1A027C9B00C98C81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD78D1A027C9B00C98C81 /* UIKit.framework */; };
+		84FCD7941A027C9B00C98C81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84FCD7921A027C9B00C98C81 /* InfoPlist.strings */; };
+		84FCD7961A027C9B00C98C81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FCD7951A027C9B00C98C81 /* main.m */; };
+		84FCD79A1A027C9B00C98C81 /* HMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FCD7991A027C9B00C98C81 /* HMAppDelegate.m */; };
+		84FCD79D1A027C9B00C98C81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FCD79B1A027C9B00C98C81 /* Main.storyboard */; };
+		84FCD7A01A027C9B00C98C81 /* HMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FCD79F1A027C9B00C98C81 /* HMViewController.m */; };
+		84FCD7A21A027C9B00C98C81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FCD7A11A027C9B00C98C81 /* Images.xcassets */; };
+		84FCD7A91A027C9B00C98C81 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD7A81A027C9B00C98C81 /* XCTest.framework */; };
+		84FCD7AA1A027C9B00C98C81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD7891A027C9B00C98C81 /* Foundation.framework */; };
+		84FCD7AB1A027C9B00C98C81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD78D1A027C9B00C98C81 /* UIKit.framework */; };
+		84FCD7B31A027C9B00C98C81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84FCD7B11A027C9B00C98C81 /* InfoPlist.strings */; };
+		84FCD7B51A027C9B00C98C81 /* HouseMaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FCD7B41A027C9B00C98C81 /* HouseMaxTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84FCD7AC1A027C9B00C98C81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84FCD77E1A027C9B00C98C81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84FCD7851A027C9B00C98C81;
+			remoteInfo = HouseMax;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84FCD7861A027C9B00C98C81 /* HouseMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FCD7891A027C9B00C98C81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84FCD78B1A027C9B00C98C81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		84FCD78D1A027C9B00C98C81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84FCD7911A027C9B00C98C81 /* HouseMax-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HouseMax-Info.plist"; sourceTree = "<group>"; };
+		84FCD7931A027C9B00C98C81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84FCD7951A027C9B00C98C81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84FCD7971A027C9B00C98C81 /* HouseMax-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HouseMax-Prefix.pch"; sourceTree = "<group>"; };
+		84FCD7981A027C9B00C98C81 /* HMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMAppDelegate.h; sourceTree = "<group>"; };
+		84FCD7991A027C9B00C98C81 /* HMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMAppDelegate.m; sourceTree = "<group>"; };
+		84FCD79C1A027C9B00C98C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84FCD79E1A027C9B00C98C81 /* HMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMViewController.h; sourceTree = "<group>"; };
+		84FCD79F1A027C9B00C98C81 /* HMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMViewController.m; sourceTree = "<group>"; };
+		84FCD7A11A027C9B00C98C81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84FCD7A71A027C9B00C98C81 /* HouseMaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseMaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FCD7A81A027C9B00C98C81 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84FCD7B01A027C9B00C98C81 /* HouseMaxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HouseMaxTests-Info.plist"; sourceTree = "<group>"; };
+		84FCD7B21A027C9B00C98C81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84FCD7B41A027C9B00C98C81 /* HouseMaxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseMaxTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84FCD7831A027C9B00C98C81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCD78C1A027C9B00C98C81 /* CoreGraphics.framework in Frameworks */,
+				84FCD78E1A027C9B00C98C81 /* UIKit.framework in Frameworks */,
+				84FCD78A1A027C9B00C98C81 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCD7A41A027C9B00C98C81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCD7A91A027C9B00C98C81 /* XCTest.framework in Frameworks */,
+				84FCD7AB1A027C9B00C98C81 /* UIKit.framework in Frameworks */,
+				84FCD7AA1A027C9B00C98C81 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84FCD77D1A027C9B00C98C81 = {
+			isa = PBXGroup;
+			children = (
+				84FCD78F1A027C9B00C98C81 /* HouseMax */,
+				84FCD7AE1A027C9B00C98C81 /* HouseMaxTests */,
+				84FCD7881A027C9B00C98C81 /* Frameworks */,
+				84FCD7871A027C9B00C98C81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84FCD7871A027C9B00C98C81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84FCD7861A027C9B00C98C81 /* HouseMax.app */,
+				84FCD7A71A027C9B00C98C81 /* HouseMaxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84FCD7881A027C9B00C98C81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84FCD7891A027C9B00C98C81 /* Foundation.framework */,
+				84FCD78B1A027C9B00C98C81 /* CoreGraphics.framework */,
+				84FCD78D1A027C9B00C98C81 /* UIKit.framework */,
+				84FCD7A81A027C9B00C98C81 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84FCD78F1A027C9B00C98C81 /* HouseMax */ = {
+			isa = PBXGroup;
+			children = (
+				84FCD7981A027C9B00C98C81 /* HMAppDelegate.h */,
+				84FCD7991A027C9B00C98C81 /* HMAppDelegate.m */,
+				84FCD79B1A027C9B00C98C81 /* Main.storyboard */,
+				84FCD79E1A027C9B00C98C81 /* HMViewController.h */,
+				84FCD79F1A027C9B00C98C81 /* HMViewController.m */,
+				84FCD7A11A027C9B00C98C81 /* Images.xcassets */,
+				84FCD7901A027C9B00C98C81 /* Supporting Files */,
+			);
+			path = HouseMax;
+			sourceTree = "<group>";
+		};
+		84FCD7901A027C9B00C98C81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84FCD7911A027C9B00C98C81 /* HouseMax-Info.plist */,
+				84FCD7921A027C9B00C98C81 /* InfoPlist.strings */,
+				84FCD7951A027C9B00C98C81 /* main.m */,
+				84FCD7971A027C9B00C98C81 /* HouseMax-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84FCD7AE1A027C9B00C98C81 /* HouseMaxTests */ = {
+			isa = PBXGroup;
+			children = (
+				84FCD7B41A027C9B00C98C81 /* HouseMaxTests.m */,
+				84FCD7AF1A027C9B00C98C81 /* Supporting Files */,
+			);
+			path = HouseMaxTests;
+			sourceTree = "<group>";
+		};
+		84FCD7AF1A027C9B00C98C81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84FCD7B01A027C9B00C98C81 /* HouseMaxTests-Info.plist */,
+				84FCD7B11A027C9B00C98C81 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84FCD7851A027C9B00C98C81 /* HouseMax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FCD7B81A027C9B00C98C81 /* Build configuration list for PBXNativeTarget "HouseMax" */;
+			buildPhases = (
+				84FCD7821A027C9B00C98C81 /* Sources */,
+				84FCD7831A027C9B00C98C81 /* Frameworks */,
+				84FCD7841A027C9B00C98C81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HouseMax;
+			productName = HouseMax;
+			productReference = 84FCD7861A027C9B00C98C81 /* HouseMax.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84FCD7A61A027C9B00C98C81 /* HouseMaxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FCD7BB1A027C9B00C98C81 /* Build configuration list for PBXNativeTarget "HouseMaxTests" */;
+			buildPhases = (
+				84FCD7A31A027C9B00C98C81 /* Sources */,
+				84FCD7A41A027C9B00C98C81 /* Frameworks */,
+				84FCD7A51A027C9B00C98C81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84FCD7AD1A027C9B00C98C81 /* PBXTargetDependency */,
+			);
+			name = HouseMaxTests;
+			productName = HouseMaxTests;
+			productReference = 84FCD7A71A027C9B00C98C81 /* HouseMaxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84FCD77E1A027C9B00C98C81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Massimiliano;
+				TargetAttributes = {
+					84FCD7A61A027C9B00C98C81 = {
+						TestTargetID = 84FCD7851A027C9B00C98C81;
+					};
+				};
+			};
+			buildConfigurationList = 84FCD7811A027C9B00C98C81 /* Build configuration list for PBXProject "HouseMax" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84FCD77D1A027C9B00C98C81;
+			productRefGroup = 84FCD7871A027C9B00C98C81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84FCD7851A027C9B00C98C81 /* HouseMax */,
+				84FCD7A61A027C9B00C98C81 /* HouseMaxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84FCD7841A027C9B00C98C81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCD7A21A027C9B00C98C81 /* Images.xcassets in Resources */,
+				84FCD7941A027C9B00C98C81 /* InfoPlist.strings in Resources */,
+				84FCD79D1A027C9B00C98C81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCD7A51A027C9B00C98C81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCD7B31A027C9B00C98C81 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84FCD7821A027C9B00C98C81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCD7A01A027C9B00C98C81 /* HMViewController.m in Sources */,
+				84FCD7961A027C9B00C98C81 /* main.m in Sources */,
+				84FCD79A1A027C9B00C98C81 /* HMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCD7A31A027C9B00C98C81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCD7B51A027C9B00C98C81 /* HouseMaxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84FCD7AD1A027C9B00C98C81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84FCD7851A027C9B00C98C81 /* HouseMax */;
+			targetProxy = 84FCD7AC1A027C9B00C98C81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84FCD7921A027C9B00C98C81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84FCD7931A027C9B00C98C81 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		84FCD79B1A027C9B00C98C81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84FCD79C1A027C9B00C98C81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84FCD7B11A027C9B00C98C81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84FCD7B21A027C9B00C98C81 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84FCD7B61A027C9B00C98C81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84FCD7B71A027C9B00C98C81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84FCD7B91A027C9B00C98C81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HouseMax/HouseMax-Prefix.pch";
+				INFOPLIST_FILE = "HouseMax/HouseMax-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84FCD7BA1A027C9B00C98C81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HouseMax/HouseMax-Prefix.pch";
+				INFOPLIST_FILE = "HouseMax/HouseMax-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		84FCD7BC1A027C9B00C98C81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HouseMax.app/HouseMax";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HouseMax/HouseMax-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HouseMaxTests/HouseMaxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		84FCD7BD1A027C9B00C98C81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HouseMax.app/HouseMax";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HouseMax/HouseMax-Prefix.pch";
+				INFOPLIST_FILE = "HouseMaxTests/HouseMaxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84FCD7811A027C9B00C98C81 /* Build configuration list for PBXProject "HouseMax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FCD7B61A027C9B00C98C81 /* Debug */,
+				84FCD7B71A027C9B00C98C81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FCD7B81A027C9B00C98C81 /* Build configuration list for PBXNativeTarget "HouseMax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FCD7B91A027C9B00C98C81 /* Debug */,
+				84FCD7BA1A027C9B00C98C81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84FCD7BB1A027C9B00C98C81 /* Build configuration list for PBXNativeTarget "HouseMaxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FCD7BC1A027C9B00C98C81 /* Debug */,
+				84FCD7BD1A027C9B00C98C81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84FCD77E1A027C9B00C98C81 /* Project object */;
+}
