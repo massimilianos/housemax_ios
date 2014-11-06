@@ -46,7 +46,7 @@
     NSData *dataVisTemperatura = [NSURLConnection sendSynchronousRequest:urlVisTemperatura returningResponse:&responseVisTemperatura error:nil];
     NSString *resVisTemperatura = [[NSString alloc] initWithData:dataVisTemperatura encoding:NSUTF8StringEncoding];
     
-    self.lblValTemperatura.text = [NSString stringWithFormat:@"\"%@°\"", resVisTemperatura];
+    self.lblValTemperatura.text = [NSString stringWithFormat:@"%@°", resVisTemperatura];
     
     //  Leggo il valore dell'umidita'
     NSURLRequest *urlVisUmidita=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://massimilianos.ns0.it/domusalberti/dati/ElaboraDati.php?operazione=select&valore=umidita"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
@@ -54,7 +54,7 @@
     NSData *dataVisUmidita = [NSURLConnection sendSynchronousRequest:urlVisUmidita returningResponse:&responseVisUmidita error:nil];
     NSString *resVisUmidita = [[NSString alloc] initWithData:dataVisUmidita encoding:NSUTF8StringEncoding];
     
-    self.lblValUmidita.text = [NSString stringWithFormat:@"\"%@%%\"", resVisUmidita];
+    self.lblValUmidita.text = [NSString stringWithFormat:@"%@%%", resVisUmidita];
 }
 
 - (IBAction)changeSwcManualEnabler:(id)sender {
