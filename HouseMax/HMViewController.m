@@ -58,6 +58,8 @@
 }
 
 - (IBAction)changeSwcManualEnabler:(id)sender {
+    NSString *URL = nil;
+    
     if (self.swcManualEnabler.on) {
         self.lblRelay1.enabled = TRUE;
         self.lblRelay2.enabled = TRUE;
@@ -68,6 +70,8 @@
         self.swcRelay2.enabled = TRUE;
         self.swcRelay3.enabled = TRUE;
         self.swcRelay4.enabled = TRUE;
+        
+        URL = @"http://massimilianos.ns0.it:82/manualControl/1/1";
     } else {
         self.lblRelay1.enabled = FALSE;
         self.lblRelay2.enabled = FALSE;
@@ -78,6 +82,69 @@
         self.swcRelay2.enabled = FALSE;
         self.swcRelay3.enabled = FALSE;
         self.swcRelay4.enabled = FALSE;
+        
+        URL = @"http://massimilianos.ns0.it:82/manualControl/0/0";
     }
+    
+    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSURLResponse *response = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
+    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+- (IBAction)changeSwcRelay1:(id)sender {
+    NSString *URL = nil;
+    
+    if (self.swcRelay1.on) {
+        URL = @"http://massimilianos.ns0.it:82/digitalWrite/3/1";
+    } else {
+        URL = @"http://massimilianos.ns0.it:82/digitalWrite/3/0";
+    }
+    
+    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSURLResponse *response = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
+//    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+- (IBAction)changeSwcRelay2:(id)sender {
+    NSString *URL = nil;
+    
+    if (self.swcRelay2.on) {
+        URL = @"http://massimilianos.ns0.it:82/digitalWrite/4/1";
+    } else {
+        URL = @"http://massimilianos.ns0.it:82/digitalWrite/4/0";
+    }
+    
+    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSURLResponse *response = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
+//    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+- (IBAction)changeSwcRelay3:(id)sender {
+    NSString *URL = nil;
+    
+    if (self.swcRelay3.on) {
+        URL = @"http://massimilianos.ns0.it:82/digitalWrite/5/1";
+    } else {
+        URL = @"http://massimilianos.ns0.it:82/digitalWrite/5/0";
+    }
+    
+    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSURLResponse *response = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
+//    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+- (IBAction)changeSwcRelay4:(id)sender {
+    NSString *URL = nil;
+    
+    if (self.swcRelay4.on) {
+        URL = @"http://massimilianos.ns0.it:82/digitalWrite/6/1";
+    } else {
+        URL = @"http://massimilianos.ns0.it:82/digitalWrite/6/0";
+    }
+    
+    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSURLResponse *response = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
+//    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 @end
