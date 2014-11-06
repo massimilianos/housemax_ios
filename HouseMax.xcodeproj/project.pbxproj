@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840FD9481A0B732C0015CC83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FD9471A0B732C0015CC83 /* MapKit.framework */; };
 		84FCD78A1A027C9B00C98C81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD7891A027C9B00C98C81 /* Foundation.framework */; };
 		84FCD78C1A027C9B00C98C81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD78B1A027C9B00C98C81 /* CoreGraphics.framework */; };
 		84FCD78E1A027C9B00C98C81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD78D1A027C9B00C98C81 /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840FD9471A0B732C0015CC83 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84FCD7861A027C9B00C98C81 /* HouseMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FCD7891A027C9B00C98C81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84FCD78B1A027C9B00C98C81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +64,7 @@
 			files = (
 				84FCD78C1A027C9B00C98C81 /* CoreGraphics.framework in Frameworks */,
 				84FCD78E1A027C9B00C98C81 /* UIKit.framework in Frameworks */,
+				840FD9481A0B732C0015CC83 /* MapKit.framework in Frameworks */,
 				84FCD78A1A027C9B00C98C81 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		84FCD7881A027C9B00C98C81 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840FD9471A0B732C0015CC83 /* MapKit.framework */,
 				84FCD7891A027C9B00C98C81 /* Foundation.framework */,
 				84FCD78B1A027C9B00C98C81 /* CoreGraphics.framework */,
 				84FCD78D1A027C9B00C98C81 /* UIKit.framework */,
@@ -200,6 +204,16 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Massimiliano;
 				TargetAttributes = {
+					84FCD7851A027C9B00C98C81 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					84FCD7A61A027C9B00C98C81 = {
 						TestTargetID = 84FCD7851A027C9B00C98C81;
 					};
@@ -377,9 +391,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HouseMax/HouseMax-Prefix.pch";
 				INFOPLIST_FILE = "HouseMax/HouseMax-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,9 +406,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HouseMax/HouseMax-Prefix.pch";
 				INFOPLIST_FILE = "HouseMax/HouseMax-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +475,7 @@
 				84FCD7BA1A027C9B00C98C81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84FCD7BB1A027C9B00C98C81 /* Build configuration list for PBXNativeTarget "HouseMaxTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +484,7 @@
 				84FCD7BD1A027C9B00C98C81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

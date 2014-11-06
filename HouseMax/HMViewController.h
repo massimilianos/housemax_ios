@@ -10,4 +10,16 @@
 
 @interface HMViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *btnInvia;
+@property (weak, nonatomic) IBOutlet UILabel *lblMessaggio;
+@property (weak, nonatomic) IBOutlet UITextField *txtNome;
+@property (weak, nonatomic) IBOutlet UISwitch *swcInserimentoNome;
+@property (weak, nonatomic) IBOutlet UIButton *btnRichiedi;
+@property (weak, nonatomic) IBOutlet UILabel *lblValTemperatura;
+@property (weak, nonatomic) IBOutlet UILabel *lblValUmidita;
+
+- (IBAction)clickInvia:(id)sender;
+- (IBAction)swcChangeInserimentoNome:(id)sender;
+- (IBAction)clickRichiedi:(id)sender;
+
 @end
