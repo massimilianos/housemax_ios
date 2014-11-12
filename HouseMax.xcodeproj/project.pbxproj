@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		840FD9481A0B732C0015CC83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FD9471A0B732C0015CC83 /* MapKit.framework */; };
+		8447975B1A13B1DF00A3BE67 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8447975A1A13B1DF00A3BE67 /* Settings.bundle */; };
 		84FCD78A1A027C9B00C98C81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD7891A027C9B00C98C81 /* Foundation.framework */; };
 		84FCD78C1A027C9B00C98C81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD78B1A027C9B00C98C81 /* CoreGraphics.framework */; };
 		84FCD78E1A027C9B00C98C81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCD78D1A027C9B00C98C81 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		840FD9471A0B732C0015CC83 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8447975A1A13B1DF00A3BE67 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		84FCD7861A027C9B00C98C81 /* HouseMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FCD7891A027C9B00C98C81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84FCD78B1A027C9B00C98C81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +125,7 @@
 				84FCD79F1A027C9B00C98C81 /* HMViewController.m */,
 				84FCD7A11A027C9B00C98C81 /* Images.xcassets */,
 				84FCD7901A027C9B00C98C81 /* Supporting Files */,
+				8447975A1A13B1DF00A3BE67 /* Settings.bundle */,
 			);
 			path = HouseMax;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8447975B1A13B1DF00A3BE67 /* Settings.bundle in Resources */,
 				84FCD7A21A027C9B00C98C81 /* Images.xcassets in Resources */,
 				84FCD7941A027C9B00C98C81 /* InfoPlist.strings in Resources */,
 				84FCD79D1A027C9B00C98C81 /* Main.storyboard in Resources */,
