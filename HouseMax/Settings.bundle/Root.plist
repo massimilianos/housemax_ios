@@ -11,14 +11,18 @@
 			<string>HouseMax Settings</string>
 		</dict>
 		<dict>
+			<key>Key</key>
+			<string>txtSettingsAddress</string>
 			<key>KeyboardType</key>
 			<string>URL</string>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Indirizzo</string>
+			<string>Address</string>
 		</dict>
 		<dict>
+			<key>Key</key>
+			<string>txtSettingsPort</string>
 			<key>KeyboardType</key>
 			<string>NumberPad</string>
 			<key>DefaultValue</key>
@@ -26,7 +30,7 @@
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Porta</string>
+			<string>Port</string>
 		</dict>
 	</array>
 </dict>
