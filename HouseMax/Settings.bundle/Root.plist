@@ -11,6 +11,8 @@
 			<string>HouseMax Settings</string>
 		</dict>
 		<dict>
+			<key>DefaultValue</key>
+			<string>http://localhost</string>
 			<key>Key</key>
 			<string>txtSettingsAddress</string>
 			<key>KeyboardType</key>

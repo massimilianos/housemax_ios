@@ -12,7 +12,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSArray *values = [NSArray arrayWithObjects:@"http://localhost", @"80", nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"txtSettingsAddress", @"txtSettingsPort", nil];
+    
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+    
     return YES;
 }
 							

@@ -14,9 +14,19 @@
 
 @implementation HMViewController
 
+NSString *arduinoAddress;
+NSString *arduinoPort;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    arduinoAddress = [[NSUserDefaults standardUserDefaults] stringForKey:@"txtSettingsAddress"];
+    arduinoPort = [[NSUserDefaults standardUserDefaults] stringForKey:@"txtSettingsPort"];
+    
+    if (arduinoAddress == nil || arduinoPort == nil) {
+        UIAlertView *alertBtnInvia = [[UIAlertView alloc] initWithTitle:@"Impostazioni Arduino" message:@"Una o più impostazioni non corrette!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alertBtnInvia show];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,17 +35,23 @@
 }
 
 /*
- Questo metodo serve per far sparire la tastiera una volta finito
- usarla, altrimenti rimarrebbe sullo schermo
+    Questo metodo serve per far sparire la tastiera una volta finito
+    usarla, altrimenti rimarrebbe sullo schermo
 */
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
 
-- (IBAction)clickBtnUpdateTempHum:(id)sender {
-    //    UIAlertView *alertBtnInvia = [[UIAlertView alloc] initWithTitle:@"Bottone INVIA" message:@"Hai premuto il tasto INVIA!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-    //    [alertBtnInvia show];
+- (NSString *) inviaComando:(NSString *) URL {
+    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSURLResponse *response = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
+    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
+    return res;
+}
+
+- (IBAction)clickBtnUpdateTempHum:(id)sender {
     //  Aggiorno i valori di temperatura ed umidita'
     NSURL *urlUpdateTemperaturaUmidita = [NSURL URLWithString:@"http://massimilianos.ns0.it:82/tempRead/0/0"];
     [NSData dataWithContentsOfURL:urlUpdateTemperaturaUmidita];
@@ -71,7 +87,7 @@
         self.swcRelay3.enabled = TRUE;
         self.swcRelay4.enabled = TRUE;
         
-        URL = @"http://massimilianos.ns0.it:82/manualControl/1/1";
+        URL = [NSString stringWithFormat:@"http://%@:%@/manualControl/1/1", arduinoAddress, arduinoPort];
     } else {
         self.lblRelay1.enabled = FALSE;
         self.lblRelay2.enabled = FALSE;
@@ -83,7 +99,7 @@
         self.swcRelay3.enabled = FALSE;
         self.swcRelay4.enabled = FALSE;
         
-        URL = @"http://massimilianos.ns0.it:82/manualControl/0/0";
+        URL = [NSString stringWithFormat:@"http://%@:%@/manualControl/0/0", arduinoAddress, arduinoPort];
     }
     
     NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
@@ -103,7 +119,7 @@
     NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     NSURLResponse *response = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-//    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 - (IBAction)changeSwcRelay2:(id)sender {
     NSString *URL = nil;
@@ -117,7 +133,7 @@
     NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     NSURLResponse *response = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-//    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 - (IBAction)changeSwcRelay3:(id)sender {
     NSString *URL = nil;
@@ -131,7 +147,7 @@
     NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     NSURLResponse *response = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-//    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 - (IBAction)changeSwcRelay4:(id)sender {
     NSString *URL = nil;
@@ -145,6 +161,6 @@
     NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     NSURLResponse *response = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-//    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 @end
