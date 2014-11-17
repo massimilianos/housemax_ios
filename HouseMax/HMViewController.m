@@ -52,25 +52,17 @@ NSString *arduinoPort;
 }
 
 - (IBAction)clickBtnUpdateTempHum:(id)sender {
-    //  Aggiorno i valori di temperatura ed umidita'
-    NSURL *urlUpdateTemperaturaUmidita = [NSURL URLWithString:@"http://massimilianos.ns0.it:82/tempRead/0/0"];
-    [NSData dataWithContentsOfURL:urlUpdateTemperaturaUmidita];
-    
     //  Leggo il valore della temperatura
-    NSURLRequest *urlVisTemperatura=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://massimilianos.ns0.it/domusalberti/dati/ElaboraDati.php?operazione=select&valore=temperatura"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    NSURLResponse *responseVisTemperatura = nil;
-    NSData *dataVisTemperatura = [NSURLConnection sendSynchronousRequest:urlVisTemperatura returningResponse:&responseVisTemperatura error:nil];
-    NSString *resVisTemperatura = [[NSString alloc] initWithData:dataVisTemperatura encoding:NSUTF8StringEncoding];
+    NSString *URLUpdateTemperatura = [NSString stringWithFormat:@"http://%@:%@/temperatureRead/0/0", arduinoAddress, arduinoPort];
+    NSString *resVisTemperatura = [self inviaComando:URLUpdateTemperatura];
     
     self.lblValTemperatura.text = [NSString stringWithFormat:@"%@°", resVisTemperatura];
     
     //  Leggo il valore dell'umidita'
-    NSURLRequest *urlVisUmidita=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://massimilianos.ns0.it/domusalberti/dati/ElaboraDati.php?operazione=select&valore=umidita"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    NSURLResponse *responseVisUmidita = nil;
-    NSData *dataVisUmidita = [NSURLConnection sendSynchronousRequest:urlVisUmidita returningResponse:&responseVisUmidita error:nil];
-    NSString *resVisUmidita = [[NSString alloc] initWithData:dataVisUmidita encoding:NSUTF8StringEncoding];
+    NSString *URLUpdateUmidita = [NSString stringWithFormat:@"http://%@:%@/humidityRead/0/0", arduinoAddress, arduinoPort];
+    NSString *resVisUmidita = [self inviaComando:URLUpdateUmidita];
     
-    self.lblValUmidita.text = [NSString stringWithFormat:@"%@%%", resVisUmidita];
+    self.lblValUmidita.text = [NSString stringWithFormat:@"%@°", resVisUmidita];
 }
 
 - (IBAction)changeSwcManualEnabler:(id)sender {
@@ -87,7 +79,7 @@ NSString *arduinoPort;
         self.swcRelay3.enabled = TRUE;
         self.swcRelay4.enabled = TRUE;
         
-        URL = [NSString stringWithFormat:@"http://%@:%@/manualControl/1/1", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/manualControlOnOff/1/1", arduinoAddress, arduinoPort];
     } else {
         self.lblRelay1.enabled = FALSE;
         self.lblRelay2.enabled = FALSE;
@@ -99,68 +91,59 @@ NSString *arduinoPort;
         self.swcRelay3.enabled = FALSE;
         self.swcRelay4.enabled = FALSE;
         
-        URL = [NSString stringWithFormat:@"http://%@:%@/manualControl/0/0", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/manualControlOnOff/0/0", arduinoAddress, arduinoPort];
     }
     
-    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    NSURLResponse *response = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *result = [self inviaComando:URL];
+    NSLog(@"%@", result);
 }
+
 - (IBAction)changeSwcRelay1:(id)sender {
     NSString *URL = nil;
     
     if (self.swcRelay1.on) {
-        URL = @"http://massimilianos.ns0.it:82/digitalWrite/3/1";
+        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/3/1", arduinoAddress, arduinoPort];
     } else {
-        URL = @"http://massimilianos.ns0.it:82/digitalWrite/3/0";
+        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/3/0", arduinoAddress, arduinoPort];
     }
     
-    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    NSURLResponse *response = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *result = [self inviaComando:URL];
+    NSLog(@"%@", result);
 }
 - (IBAction)changeSwcRelay2:(id)sender {
     NSString *URL = nil;
     
     if (self.swcRelay2.on) {
-        URL = @"http://massimilianos.ns0.it:82/digitalWrite/4/1";
+        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/4/1", arduinoAddress, arduinoPort];
     } else {
-        URL = @"http://massimilianos.ns0.it:82/digitalWrite/4/0";
+        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/4/0", arduinoAddress, arduinoPort];
     }
     
-    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    NSURLResponse *response = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *result = [self inviaComando:URL];
+    NSLog(@"%@", result);
 }
 - (IBAction)changeSwcRelay3:(id)sender {
     NSString *URL = nil;
     
     if (self.swcRelay3.on) {
-        URL = @"http://massimilianos.ns0.it:82/digitalWrite/5/1";
+        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/5/1", arduinoAddress, arduinoPort];
     } else {
-        URL = @"http://massimilianos.ns0.it:82/digitalWrite/5/0";
+        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/5/0", arduinoAddress, arduinoPort];
     }
     
-    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    NSURLResponse *response = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *result = [self inviaComando:URL];
+    NSLog(@"%@", result);
 }
 - (IBAction)changeSwcRelay4:(id)sender {
     NSString *URL = nil;
     
     if (self.swcRelay4.on) {
-        URL = @"http://massimilianos.ns0.it:82/digitalWrite/6/1";
+        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/6/1", arduinoAddress, arduinoPort];
     } else {
-        URL = @"http://massimilianos.ns0.it:82/digitalWrite/6/0";
+        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/6/0", arduinoAddress, arduinoPort];
     }
     
-    NSURLRequest *url=[NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    NSURLResponse *response = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:url returningResponse:&response error:nil];
-    NSString *res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *result = [self inviaComando:URL];
+    NSLog(@"%@", result);
 }
 @end

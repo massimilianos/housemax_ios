@@ -10,6 +10,8 @@
 
 @interface HMViewController : UIViewController
 
+- (NSString *) inviaComando:(NSString *) URL;
+
 // Intestazione Programma
 @property (weak, nonatomic) IBOutlet UILabel *lblHouseMax;
 
