@@ -62,7 +62,7 @@ NSString *arduinoPort;
     NSString *URLUpdateUmidita = [NSString stringWithFormat:@"http://%@:%@/humidityRead/0/0", arduinoAddress, arduinoPort];
     NSString *resVisUmidita = [self inviaComando:URLUpdateUmidita];
     
-    self.lblValUmidita.text = [NSString stringWithFormat:@"%@°", resVisUmidita];
+    self.lblValUmidita.text = [NSString stringWithFormat:@"%@%%", resVisUmidita];
 }
 
 - (IBAction)changeSwcManualEnabler:(id)sender {

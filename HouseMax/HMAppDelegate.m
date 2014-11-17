@@ -12,7 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSArray *values = [NSArray arrayWithObjects:@"http://localhost", @"80", nil];
+    NSArray *values = [NSArray arrayWithObjects:@"localhost", @"80", nil];
     NSArray *keys = [NSArray arrayWithObjects:@"txtSettingsAddress", @"txtSettingsPort", nil];
     
     NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:values forKeys:keys];
