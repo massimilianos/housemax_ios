@@ -53,13 +53,13 @@ NSString *arduinoPort;
 
 - (IBAction)clickBtnUpdateTempHum:(id)sender {
     //  Leggo il valore della temperatura
-    NSString *URLUpdateTemperatura = [NSString stringWithFormat:@"http://%@:%@/temperatureRead/0/0", arduinoAddress, arduinoPort];
+    NSString *URLUpdateTemperatura = [NSString stringWithFormat:@"http://%@:%@/index.htm?TemperatureRead", arduinoAddress, arduinoPort];
     NSString *resVisTemperatura = [self inviaComando:URLUpdateTemperatura];
     
     self.lblValTemperatura.text = [NSString stringWithFormat:@"%@°", resVisTemperatura];
     
     //  Leggo il valore dell'umidita'
-    NSString *URLUpdateUmidita = [NSString stringWithFormat:@"http://%@:%@/humidityRead/0/0", arduinoAddress, arduinoPort];
+    NSString *URLUpdateUmidita = [NSString stringWithFormat:@"http://%@:%@/index.htm?HumidityRead", arduinoAddress, arduinoPort];
     NSString *resVisUmidita = [self inviaComando:URLUpdateUmidita];
     
     self.lblValUmidita.text = [NSString stringWithFormat:@"%@%%", resVisUmidita];
@@ -79,7 +79,7 @@ NSString *arduinoPort;
         self.swcRelay3.enabled = TRUE;
         self.swcRelay4.enabled = TRUE;
         
-        URL = [NSString stringWithFormat:@"http://%@:%@/manualControlOnOff/1/1", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?ManualControl=ON", arduinoAddress, arduinoPort];
     } else {
         self.lblRelay1.enabled = FALSE;
         self.lblRelay2.enabled = FALSE;
@@ -91,7 +91,7 @@ NSString *arduinoPort;
         self.swcRelay3.enabled = FALSE;
         self.swcRelay4.enabled = FALSE;
         
-        URL = [NSString stringWithFormat:@"http://%@:%@/manualControlOnOff/0/0", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?ManualControl=OFF", arduinoAddress, arduinoPort];
     }
     
     NSString *result = [self inviaComando:URL];
@@ -102,9 +102,9 @@ NSString *arduinoPort;
     NSString *URL = nil;
     
     if (self.swcRelay1.on) {
-        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/3/1", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?Relay1=ON", arduinoAddress, arduinoPort];
     } else {
-        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/3/0", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?Relay1=OFF", arduinoAddress, arduinoPort];
     }
     
     NSString *result = [self inviaComando:URL];
@@ -114,9 +114,9 @@ NSString *arduinoPort;
     NSString *URL = nil;
     
     if (self.swcRelay2.on) {
-        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/4/1", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?Relay2=ON", arduinoAddress, arduinoPort];
     } else {
-        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/4/0", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?Relay2=OFF", arduinoAddress, arduinoPort];
     }
     
     NSString *result = [self inviaComando:URL];
@@ -126,9 +126,9 @@ NSString *arduinoPort;
     NSString *URL = nil;
     
     if (self.swcRelay3.on) {
-        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/5/1", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?Relay3=ON", arduinoAddress, arduinoPort];
     } else {
-        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/5/0", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?Relay3=OFF", arduinoAddress, arduinoPort];
     }
     
     NSString *result = [self inviaComando:URL];
@@ -138,9 +138,9 @@ NSString *arduinoPort;
     NSString *URL = nil;
     
     if (self.swcRelay4.on) {
-        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/6/1", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?Relay4=ON", arduinoAddress, arduinoPort];
     } else {
-        URL = [NSString stringWithFormat:@"http://%@:%@/relayOnOff/6/0", arduinoAddress, arduinoPort];
+        URL = [NSString stringWithFormat:@"http://%@:%@/index.htm?Relay4=OFF", arduinoAddress, arduinoPort];
     }
     
     NSString *result = [self inviaComando:URL];
